@@ -14,7 +14,7 @@ Option 1: **Download ZIP**
 1. Click the green "Code" button on the GitHub repository page.
 2. Choose "Download ZIP."
 3. Extract the downloaded ZIP file to your preferred location.
-4. Keep in mind you still need to use some stages of the Option 2 to download some of the pre-requirements to run the game such as Tkinter and Pil
+4. Keep in mind you still need to use some stages of the Option 2 to download some of the pre-requirements to run the game such as Tkinter and Pil.
 
 Option 2: **Clone the Repository**:
 Open a terminal window (Command Prompt on Windows, or Terminal on macOS/Linux) and run the following command:
@@ -27,7 +27,7 @@ This command downloads a copy of the repository to your local machine.
 Navigate to the Cloned Repository:
 After cloning, you need to change your terminal's current directory to the location where the repository was cloned. If you've used the default settings, the repository will be in a folder with the same name as your repository.
 
-For example, if your repository is named minesweeper, run:   cd Minesweeper
+For example, if your repository is named minesweeper, run:   cd Minesweeper --
 
 This command changes your current directory to the minesweeper folder, which is the local copy of your GitHub repository.
 The cd Minesweeper instruction assumes that the repository was cloned into a folder with the same name as your repository. If you used a different folder name during cloning, replace Minesweeper with the correct folder name.
@@ -37,12 +37,12 @@ If there are any external dependencies, install them:
 Tkinter:
 Tkinter is the standard GUI toolkit for Python. It is used to create the graphical user interface for your Minesweeper game.
 
-You can include the following command for users to install Tkinter using pip:  pip install tk
+You can include the following command for users to install Tkinter using pip:  pip install tk --
 
 PIL (Python Imaging Library):
 PIL is used for working with images. In this case, it's utilized for loading and displaying smiley icons in the game.
 
-You can install PIL using the following command:  pip install pillow
+You can install PIL using the following command:  pip install pillow --
 
 You need to download or clone the entire repository, including the images folder, for the game to run correctly.
 
@@ -60,9 +60,9 @@ Here are some brief instructions on how to play the Minesweeper game:
 Features:
 Three difficulty levels (easy, medium, difficult).
 Flagging system to mark potential mine locations.
-You can use as many flags as you want(They are displayed with just a red color filler for the cells)
-The Mines_left label updates based on how many flags you have placed
-The Mines_left label only updates as long as you place flags <= mines_left in the board
+You can use as many flags as you want(They are displayed with just a red color filler for the cells).
+The Mines_left label updates based on how many flags you have placed.
+The Mines_left label only updates as long as you place flags <= mines_left in the board.
 But you can still choose to put down as many flags as you want!
 
 Contributions:
