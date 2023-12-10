@@ -37,6 +37,8 @@ PIL is used for working with images. In this case, it's utilized for loading and
 
 You can install PIL using the following command:  pip install pillow
 
+You need to download or clone the entire repository, including the images folder, for the game to run correctly.
+
 **Run the Minesweeper Game**:
 To run the Minesweeper game, execute the following command in your terminal within the project directory:
     python mines.py
