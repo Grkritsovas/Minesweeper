@@ -77,6 +77,6 @@ Acknowledgments
 - [Pillow](https://pillow.readthedocs.io/): Python Imaging Library used for working with images.
 
 **Happy mining**
-![Screenshot 1](Screenshot1.png)
-![Screenshot 2](Screenshot2.png)
+![Screenshot 1](screenshots/Screenshot1.png)
+![Screenshot 2](screenshots/Screenshot2.png)
 
