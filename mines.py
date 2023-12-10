@@ -18,8 +18,8 @@ class MinesweeperGUI:
     def __init__(self, master):
         self.master = master
         self.master.title("Minesweeper")
-        image_path_normal = "smiley_normal.png"
-
+        image_path_normal = "images/smiley_normal.png"
+        
         # Open the image with PIL
         pil_image = Image.open(image_path_normal)
 
@@ -37,8 +37,8 @@ class MinesweeperGUI:
         self.face_button = tk.Button(self.main_frame, image=self.smiley_normal, command=self.show_difficulty_selection, width=26, height=26)
         self.face_button.grid(row=0, column=1)
 
-        self.smiley_win = tk.PhotoImage(width=32, height=32)  # Replace with your image
-        self.smiley_lose = tk.PhotoImage(width=32, height=32)  # Replace with your image
+        self.smiley_win = tk.PhotoImage(width=32, height=32)
+        self.smiley_lose = tk.PhotoImage(width=32, height=32)
 
         # Initialize game variables
         self.size = 0
@@ -49,11 +49,11 @@ class MinesweeperGUI:
 
         # Mines Left label
         self.mines_left_label = tk.Label(self.main_frame, text="Mines Left: 0")
-        self.mines_left_label.grid(row=1, column=2, columnspan=3, sticky="w")  # Adjust columnspan as needed
+        self.mines_left_label.grid(row=1, column=2, columnspan=3, sticky="w")
 
         # Create difficulty selection button
         self.difficulty_button = tk.Button(self.main_frame, text="Choose Difficulty", command=self.show_difficulty_selection)
-        self.difficulty_button.grid(row=0, column=2, pady=(10, 0), columnspan=3, sticky="w")  # Adjust columnspan and pady as needed
+        self.difficulty_button.grid(row=0, column=2, pady=(10, 0), columnspan=3, sticky="w")
 
         # Initialize Mines Left label with the correct text
         self.update_mines_left_label()
@@ -104,7 +104,7 @@ class MinesweeperGUI:
     def start_game(self, difficulty):
         if difficulty is None:
             return
-
+            
         # Reset the game first
         self.reset_game()
 
@@ -120,7 +120,7 @@ class MinesweeperGUI:
         self.update_mines_left_label()
 
         # Calculate the window size based on the size of the grid and difficulty level
-        window_width = 50 * self.size  # Adjust the multiplier as needed
+        window_width = 50 * self.size
 
         # Define a dictionary for difficulty-specific constants
         difficulty_constants = {0: 50, 1: 100, 2: 150}
@@ -133,7 +133,7 @@ class MinesweeperGUI:
         self.master.geometry(f"{window_width}x{window_height}")
 
         # Set the minimum size of the window
-        min_width = 50 * self.size  # Adjust the multiplier as needed
+        min_width = 50 * self.size
         min_height = 50 * self.size + window_height_constant  # Adjust the multiplier for labels
         self.master.minsize(min_width, min_height)
 
@@ -240,12 +240,12 @@ class MinesweeperGUI:
         # Recreate difficulty button
         self.difficulty_button.destroy()
         self.difficulty_button = tk.Button(self.main_frame, text="Choose Difficulty", command=self.show_difficulty_selection)
-        self.difficulty_button.grid(row=0, column=2, pady=(10, 0), columnspan=1, rowspan=1, sticky="w")  # Adjust columnspan and pady as needed
+        self.difficulty_button.grid(row=0, column=2, pady=(10, 0), columnspan=1, rowspan=1, sticky="w")
 
         # Recreate Mines Left label with adjusted layout
         self.mines_left = 0  # Reset mines_left to 0
         self.mines_left_label = tk.Label(self.main_frame, text=f"Mines Left: {self.mines_left}")
-        self.mines_left_label.grid(row=1, column=2, columnspan=3, sticky="w")  # Adjust columnspan as needed
+        self.mines_left_label.grid(row=1, column=2, columnspan=3, sticky="w")
 
         # Initialize game variables
         self.size = 0
@@ -280,7 +280,7 @@ class MinesweeperGUI:
         # Generate the mine table if it hasn't been generated yet
         if not self.mine_table:
             self.create_mine_table()
-            # Ensure that the first revealed cell is not a mine
+            # Ensure that the first revealed cell is not a mine (this part doesn't actually work but it's ok chances are you won't hit a mine on your first try!)
             while self.mine_table[row][col] == 'mine':
                 self.create_mine_table()
 
@@ -386,12 +386,12 @@ class MinesweeperGUI:
         return True
 
     def show_win_popup(self):
-        image_path = "smiley_win.png"
-        self.show_popup("Congratulations! You won!", image_path)
+        image_path_win = "images/smiley_win.png"
+        self.show_popup("Congratulations! You won!", image_path_win)
 
     def show_loss_popup(self):
-        image_path = "smiley_lose.png"
-        self.show_popup("You hit a mine!", image_path)
+        image_path_lose = "images/smiley_lose.png"
+        self.show_popup("You hit a mine!", image_path_lose)
 
     def show_popup(self, message, image_path):
         pil_image = Image.open(image_path)
