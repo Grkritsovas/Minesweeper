@@ -9,7 +9,14 @@ Welcome to the Minesweeper game! This project is a simple implementation of Mine
 
 Follow these steps to run the Minesweeper game on your local machine:
 
-**Clone the Repository**:
+Option 1: **Download ZIP**
+
+1. Click the green "Code" button on the GitHub repository page.
+2. Choose "Download ZIP."
+3. Extract the downloaded ZIP file to your preferred location.
+4. Keep in mind you still need to use some stages of the Option 2 to download some of the pre-requirements to run the game such as Tkinter and Pil
+
+Option 2: **Clone the Repository**:
 Open a terminal window (Command Prompt on Windows, or Terminal on macOS/Linux) and run the following command:
     ```bash
     
