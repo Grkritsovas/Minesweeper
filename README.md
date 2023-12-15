@@ -71,7 +71,7 @@ All contributions are welcome!
 License:
 This Minesweeper project is licensed under the [MIT License](LICENSE).
 
-Acknowledgments
+Acknowledgements
 
 - [Tkinter](https://docs.python.org/3/library/tkinter.html): Standard GUI toolkit for Python.
 - [Pillow](https://pillow.readthedocs.io/): Python Imaging Library used for working with images.
